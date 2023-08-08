@@ -1,4 +1,5 @@
 import React from "react";
+import Contactinfo from "./contactinfo";
 
 function Card(props) {
   return (
@@ -8,15 +9,9 @@ function Card(props) {
       </div>
       <div>
         <h2 className="name">{props.name}</h2>
-        <p className="info">
-          <strong>Contact : </strong> {props.phone}
-        </p>
-        <p className="info">
-          <strong>Email : </strong> {props.email}
-        </p>
-        <p className="info">
-          <strong>Company : </strong> {props.company}
-        </p>
+        <Contactinfo itemlable="Contact" itemname={props.phone} />
+        <Contactinfo itemlable="Email" itemname={props.email} />
+        <Contactinfo itemlable="Company" itemname={props.company} />
       </div>
     </div>
   );
